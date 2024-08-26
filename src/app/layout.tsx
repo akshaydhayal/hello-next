@@ -16,6 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="dscvr:canvas:version" content="vNext"/>
+    {/* <!-- Open Graph Image for previewing the Canvas --> */}
+    <meta name="og:image" content="https://my-canvas.com/preview-image.png"/>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
