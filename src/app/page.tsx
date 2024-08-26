@@ -15,13 +15,13 @@ export default function Home() {
       }
       fetchProducts();
     },[])
-    
+
   return (
     <div>
       <h1>Hello</h1>
       <div className="flex flex-col gap-4 p-4">
-        {products && products.map((p)=>{
-          return <div className="border">
+        {products && products.map((p:any,ind:number)=>{
+          return <div className="border" key={ind}>
             <p className="text-white">{p.title}</p>
             <p className="text-yellow-500">{p.description}</p>
             <p>{p.category}</p>
